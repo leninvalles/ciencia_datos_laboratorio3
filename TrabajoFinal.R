@@ -45,9 +45,34 @@ epa_http$Tiempo <- as.POSIXct(epa_http$Tiempo, format = "[%d:%H:%M:%S]",tz="CET"
 #
 #2. Identificar el número único de usuarios que han interactuado directamente con
 #el servidor de forma segregada según si los usuarios han tenido algún tipo de
-#error en las distintas peticiones ofrecidas por el servidor..
+#error en las distintas peticiones ofrecidas por el servidor.
 #
 #
+#Aplicamos el filtro para los valores de Codigo. El filtro es aplicado teniendo 
+#en consideración solo respuestas 200, 302 y 304. Las respuestas 400,403,404,
+#500 y 501 no se toman en cuenta porque indica que el servidor no puede procesar
+#la solicitud, por lo cual se percibe como un error del cliente (usuario).
+filtro3 <- filter(epa_http, Codigo == 200 | Codigo == 302 | Codigo == 304)
+View(filtro3)
+
+#Comprobamos si se han aplicado correctamente los filtros.
+unique(filtro3$Codigo)
+#
+#
+#3. Analizar los distintos tipos de peticiones HTTP (GET, POST, PUT, DELETE)
+#gestionadas por el servidor, identificando la frecuencia de cada una de estas.
+#Repetir el análisis, esta vez filtrando previamente aquellas peticiones
+#correspondientes a recursos ofrecidos de tipo imagen.
+#
+#
+
+
+
+
+
+
+
+
 
 
 
