@@ -65,6 +65,23 @@ unique(filtro3$Codigo)
 #correspondientes a recursos ofrecidos de tipo imagen.
 #
 #
+#Utilizando el método Table organizamos los métodos GET, HEAD y POST, midiendo 
+#su frecuencia en relación a la columna "Tipo"
+filtrotipo <- table(epa_http$Tipo)
+#Visualizar el filtro
+View(filtrotipo)
+#Comprobamos si se han aplicado correctamente los filtros.
+unique(filtrotipo$Codigo)
+#
+#
+#4. Generar al menos 2 gráficos distintos que permitan visualizar alguna
+#característica relevante de los datos analizados. Estos deberán representar por
+#lo menos 1 o 2 variables diferentes del data frame. Describid el gráfico e 
+#indicad cualquier observación destacable que se pueda apreciar gracias a la
+#representación gráfica.
+#
+#
+
 
 
 
