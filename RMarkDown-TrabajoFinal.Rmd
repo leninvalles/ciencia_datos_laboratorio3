@@ -1,3 +1,22 @@
+---
+title: "Data Science Trabajo Final"
+author: "Lenin Valles | Gianpaul Custodio | Julio Fuerte"
+date: "2023-11-22"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+lang: es-ES
+---
+
+#Seminario Internacional en Herramientas y Técnicas de Detección de Ciberamenazas Actividad Evaluable 3
+
+## Análisis de Logs de Servidor Usando R
+
+
+***Proyecto de Investigación   -->  ***
+[Repositorio del Proyecto](https://github.com/leninvalles/ciencia_datos_laboratorio3.git)
+
 #******************************************************************************#
 #                                                                              #
 #        Lab 3 - Análisis de logs de servidor usando R (Parte II)              #
@@ -135,20 +154,5 @@ plot(epa_http_one_hot, col=resultado$cluster)
 epa_http2$cluster <- as.character(resultado$cluster)
 
 ggplot2::ggplot() + geom_point(data = epa_http2$cluster, mapping = aes(x = BYTES ,y = TIME_STAMP, colour = cluster))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
