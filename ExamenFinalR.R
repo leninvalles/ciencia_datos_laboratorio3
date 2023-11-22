@@ -1,4 +1,5 @@
 #Importación del archivo .csv
+#Pregunta1
 library(readr)
 library(dplyr)
 epa_http <- read_table("epa-http.csv", col_names = FALSE)
@@ -42,7 +43,7 @@ filtro5 <- table(epa_http$Tipo)
 #Visualizar el filtro
 View(filtro5)
 #Comprobamos si se han aplicado correctamente los filtros
-unique(filtro3$Codigo)
+unique(filtro5$Codigo)
 
 
 
